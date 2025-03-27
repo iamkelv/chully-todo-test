@@ -1,0 +1,50 @@
+.round {
+  position: relative;
+}
+
+.round:hover label {
+  background-color: rgba(var(--blue-dark-rgba), 0.2);
+}
+
+.round label {
+  background-color: transparent;
+  border: 2px solid var(--blue);
+  border-radius: 50%;
+  cursor: pointer;
+  height: 18px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 18px;
+}
+
+.round label:after {
+  border: 1px solid var(--gray-100);
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 4px;
+  left: 3px;
+  opacity: 0;
+  position: absolute;
+  top: 4px;
+  transform: rotate(-45deg);
+  width: 8px;
+}
+
+.round input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.round input[type="checkbox"]:checked+label {
+  background-color: var(--purple-dark);
+  border-color: var(--purple-dark);
+}
+
+.round input[type="checkbox"]:checked:hover+label {
+  opacity: 0.9;
+}
+
+.round input[type="checkbox"]:checked+label:after {
+  opacity: 1;
+}
